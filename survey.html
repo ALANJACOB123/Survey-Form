@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./survey.css">
+</head>
+<body>
+    <div class="container"></div>
+    <header class="heading">
+        <h1 id="title">Web-Development Survey Form</h1>
+        <p id="description">Thank You For Sharing Your Thoughts On Web-Development</p>
+    </header>
+    <div class="form-container">
+    <form action="./nothing.php" id="survey-form">
+        <div class="form-content">
+            <label for="name-label" id="name-label">Name</label>
+            <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Name" required>
+        </div>
+        <div class="form-content">
+            <label for="email-label" id="email-label">E-Mail</label>
+            <input type="text" id="email" name="name" class="form-control" placeholder="Enter Your E-Mail" required>
+        </div>
+        <div class="form-content">
+            <label for="number-label" id="number-label">Age<span class="clue">(Optional)</span></label>
+            <input type="number" id="number" name="name" min=10 max=99 class="form-control" placeholder="Enter Your Age" required>
+        </div>
+        <div class="form-content">
+            <p>Which option best describes your current role?</p>
+            <select name="role" id="dropdown" class="form-control">
+                <option disabled selected value>Select current role</option>
+                <option value="student">Student</option>
+                <option value="job">Full Time Job</option>
+                <option value="learner">Full Time Learner</option>
+                <option value="preferNo">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-content">
+            <p>Would you recommend Web-Development to a friend?</p>
+            <label>
+                <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">Definitely
+            </label>
+            <label>
+                <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">MayBe
+            </label>
+            <label>
+                <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked="">Not Sure
+            </label>
+        </div>
+        <div class="form-content">
+            <p>
+                What would you like to see improved?
+                <span class="clue">(Check all that apply)</span>
+            </p>
+            <label>
+                <input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox">Front-end Projects
+            </label>
+            <label>
+                <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox">Back-end Projects
+            </label>
+            <label>
+                <input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox">Data Visualization
+            </label>
+            <label>
+                <input name="prefer" value="challenges" type="checkbox" class="input-checkbox">Challenges
+            </label>
+            <label>
+                <input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox">Open Source
+                Community
+            </label>
+        </div>
+        <div class="form-content">
+            <p>Any comments or suggestions?</p>
+            <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+        </div>
+        <div class="form-content">
+            <button type="submit" id="submit" class="submit-button">
+                Submit
+            </button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>
